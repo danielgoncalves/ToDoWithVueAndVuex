@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>My To Do List</title>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/vuex"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style type="text/css">
+        .done {
+            color: #d0d0d0;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <div id="app" class="container" style="padding: 20px;">
+        <todo-new-task></todo-new-task>
+        <todo-table></todo-table>
+    </div>
+
+    <script src="./store.js"></script>
+    <script src="./ToDoTable.js"></script>
+    <script src="./ToDoNew.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {},
+            methods: {},
+            store: window.STORE
+        });
+    </script>
+</body>
+</html>
